@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
 
-import { setFilterValue } from 'redux/phonebook.slice';
+import { setFilterValue } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
 
   const setFilterValueHandler = event => {
-    const value = event.currentTarget.value.toUpperCase();
+    const value = event.currentTarget.value.toLowerCase();
 
     dispatch(setFilterValue(value));
   };

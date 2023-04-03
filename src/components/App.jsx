@@ -23,10 +23,8 @@ const App = () => {
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
-      {isLoading && <h3>Loading...</h3>}
-      {error && !isLoading && (
-        <h3 style={{ color: 'red' }}>{error || 'Error...'}</h3>
-      )}
+      {error && <h3 style={{ color: 'red' }}>{error || 'Something went wrong.'}</h3>}
+      {isLoading && !error && <h3>Loading...</h3>}
       {!isLoading && !error && <ContactList />}
     </div>
   );
