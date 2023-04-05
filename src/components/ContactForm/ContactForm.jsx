@@ -32,8 +32,6 @@ const ContactForm = () => {
 
     if (isNameAlreadyExist) {
       alert(`'${name}' is in contacts already.`);
-
-      return;
     } else {
       dispatch(
         addContact({
